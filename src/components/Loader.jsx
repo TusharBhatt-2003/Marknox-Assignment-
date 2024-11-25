@@ -19,7 +19,7 @@ const Loader = () => {
           ease: "elastic(2, 1)",
           repeat: -1, // Loop the animation
           yoyo: true, // Reverse animation on repeat
-        }
+        },
       );
     }
   }, []);

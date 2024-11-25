@@ -5,7 +5,7 @@ const Footer = ({ name, footerBG }) => {
   const { socialMedia } = portfolioData.personalInfo;
 
   return (
-    <footer className="bg-white">
+    <footer className="bg-black">
       <div
         className=" h-[50vh] text-white pt-16 pb-28 rounded-t-3xl "
         style={{

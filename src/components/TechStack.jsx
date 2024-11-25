@@ -27,9 +27,9 @@ const TechStack = () => {
 
     // Animate the container
     animationRef.current = gsap.to(container, {
-      xPercent: -50, // Move by half the width (original + duplicated)
+      xPercent: -50,
       ease: "none",
-      duration: 20,
+      duration: 25,
       repeat: -1,
     });
 
@@ -39,11 +39,11 @@ const TechStack = () => {
   }, []);
 
   return (
-    <div className="grid bg-white place-content-center border-8 rounded-t-xl border-black h-[30vh] overflow-hidden">
+    <div className="grid bg-white place-content-center border-8  border-black rounded-3xl py-10 overflow-hidden">
       <h1 className="font-['semibold'] text-4xl text-center mb-2">
         Tech Stack
       </h1>
-      <div className="relative w-full h-full flex items-center justify-center">
+      <div className="relative py-10 w-full h-full flex items-center justify-center">
         <div
           ref={iconsRef}
           onMouseEnter={handleMouseEnter}

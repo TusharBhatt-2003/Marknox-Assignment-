@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 const Home = ({ tagline, about, background }) => {
   const initialAnimationRef = useRef(null);
   const btnRef = useRef(null);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     // Initial animation on page load for both sections
@@ -23,6 +24,18 @@ const Home = ({ tagline, about, background }) => {
     gsap.fromTo(
       [btnRef.current],
       { opacity: 1, y: 500, scale: 0.5 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 2,
+        ease: "elastic(.5, 0.1)",
+        stagger: 0.3, // Stagger the animation between the two elements
+      },
+    );
+    gsap.fromTo(
+      [imgRef.current],
+      { opacity: 1, y: 0, scale: 0.5 },
       {
         opacity: 1,
         y: 0,
@@ -76,6 +89,7 @@ const Home = ({ tagline, about, background }) => {
       </div>
       <div className="w-1/2 hidden lg:block">
         <div
+          ref={imgRef}
           className="md:w-1/2 hidden lg:block h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${background})` }}
         ></div>

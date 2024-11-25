@@ -89,7 +89,7 @@ const Contact = ({ contactSection }) => {
   }, [isVisible]);
 
   return (
-    <div className="py-20 h-screen flex justify-center items-center bg-white font-['font'] overflow-hidden">
+    <div className="py-20 h-screen flex justify-center items-center bg-white font-['font'] overflow-hidden border-8 rounded-3xl border-black">
       <div className="max-w-7xl mx-auto px-4 text-center" ref={sectionRef}>
         <h2
           className="text-4xl font-bold mb-6 font-['semibold']"

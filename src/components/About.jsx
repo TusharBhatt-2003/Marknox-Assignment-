@@ -80,7 +80,7 @@ const About = ({ about, sectionBackground }) => {
   return (
     <div
       ref={sectionRef} // Attach the ref to the section
-      className="h-screen bg-white flex justify-center items-center py-20 overflow-hidden"
+      className="h-screen bg-white flex justify-center items-center py-20 overflow-hidden border-8 rounded-3xl border-black"
       style={{
         backgroundImage: `url(${sectionBackground})`,
         backgroundSize: "cover",
