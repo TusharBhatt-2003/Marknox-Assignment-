@@ -82,7 +82,15 @@ const portfolioData = {
     {
       title: "Portfolio",
       description: `This is My Actual portfolio.`,
-      technologies: ["React", "Tailwind CSS", "React-Scroll", "Vite", "Gsap", "Framer Motion", "Locomotive-Scroll"],
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "React-Scroll",
+        "Vite",
+        "Gsap",
+        "Framer Motion",
+        "Locomotive-Scroll",
+      ],
       liveDemo: "https://tushar-bhatt.vercel.app/",
       sourceCode: "https://github.com/TusharBhatt-2003",
       backgroundImage:
