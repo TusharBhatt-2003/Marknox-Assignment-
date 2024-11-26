@@ -97,7 +97,7 @@ const About = ({ about, sectionBackground }) => {
             className="w-1/2 rounded-3xl"
           />
         </div>
-        <div className="flex bg-slate-500 md:w-1/2 items-start">
+        <div className="flex md:w-1/2 items-start">
           <p
             ref={textRef} // Attach ref to paragraph
             className="md:w-[90%] lg:w-[70%] text-left font-['font'] p-5"
