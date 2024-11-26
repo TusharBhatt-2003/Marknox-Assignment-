@@ -13,6 +13,7 @@ const Footer = ({ name, footerBG }) => {
           backgroundSize: "cover",
           backgroundPosition: "",
           backgroundRepeat: "no-repeat",
+          filter: "contrast(5)", // Increase contrast to 150%
         }}
       >
         <div className="flex h-full flex-col gap-5 items-center">
