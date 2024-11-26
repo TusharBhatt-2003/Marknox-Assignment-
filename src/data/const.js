@@ -198,14 +198,14 @@ const portfolioData = {
       {
         label: "Name",
         type: "text",
-        name: "name",
+        name: "to_name",
         required: true,
         placeholder: "Bat Man",
       },
       {
         label: "Email",
         type: "email",
-        name: "email",
+        name: "from_name",
         required: true,
         placeholder: "bruce@wayne.com",
       },
