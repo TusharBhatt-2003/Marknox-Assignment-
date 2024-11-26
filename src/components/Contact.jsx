@@ -90,7 +90,10 @@ const Contact = ({ contactSection }) => {
 
   return (
     <div className="py-20 h-screen flex justify-center items-center bg-white font-['font'] overflow-hidden border-8 rounded-3xl border-black">
-      <div className="max-w-7xl mx-auto px-4 text-center" ref={sectionRef}>
+      <div
+        className="h-[80vh] flex flex-col justify-evenly mx-auto px-4 text-center"
+        ref={sectionRef}
+      >
         <h2
           className="text-4xl font-bold mb-6 font-['semibold']"
           ref={headingRef}
@@ -107,7 +110,7 @@ const Contact = ({ contactSection }) => {
               {field.type === "textarea" ? (
                 <textarea
                   name={field.name}
-                  className="w-full border border-gray-300 rounded-lg p-2"
+                  className="w-full border-b border-black outline-none p-2"
                   required={field.required}
                   value={formData[field.name] || ""}
                   onChange={handleChange}
@@ -116,7 +119,7 @@ const Contact = ({ contactSection }) => {
                 <input
                   type={field.type}
                   name={field.name}
-                  className="w-full border border-gray-300 rounded-lg p-2"
+                  className="w-full border-b border-black outline-none p-2"
                   required={field.required}
                   value={formData[field.name] || ""}
                   onChange={handleChange}
