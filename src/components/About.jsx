@@ -80,32 +80,27 @@ const About = ({ about, sectionBackground }) => {
   return (
     <div
       ref={sectionRef} // Attach the ref to the section
-      className="h-screen bg-white flex justify-center items-center py-20 overflow-hidden border-8 rounded-3xl border-black"
-      style={{
-        backgroundImage: `url(${sectionBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="h-screen bg-white flex flex-col justify-evenly items-center py-20 overflow-hidden border-8 rounded-3xl border-black"
     >
-      <div className="max-w-7xl flex flex-col justify-center items-center mx-auto px-4 text-center">
-        <h2
-          ref={headingRef} // Attach ref to heading
-          className="text-4xl font-bold mb-6 font-['semibold']"
-        >
-          About Me
-        </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center">
-          <div className="flex justify-center items-center p-5">
-            <img
-              ref={pictureRef} // Attach ref to image
-              alt="Profile Picture"
-              src={portfolioData.personalInfo.profile}
-              className="w-1/2 rounded-3xl"
-            />
-          </div>
+      <h2
+        ref={headingRef} // Attach ref to heading
+        className="text-4xl font-bold mb-6 font-['semibold']"
+      >
+        About Me
+      </h2>
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="flex md:w-1/2 md:h-full justify-center items-center">
+          <img
+            ref={pictureRef} // Attach ref to image
+            alt="Profile Picture"
+            src={portfolioData.personalInfo.profile}
+            className="w-1/2 rounded-3xl"
+          />
+        </div>
+        <div className="flex bg-slate-500 md:w-1/2 items-start">
           <p
             ref={textRef} // Attach ref to paragraph
-            className="w-[80vw] lg:w-1/2 p-5 text-left font-['font']"
+            className="md:w-[90%] lg:w-[70%] text-left font-['font'] p-5"
           >
             {about}
           </p>
