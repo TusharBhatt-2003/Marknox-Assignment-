@@ -166,7 +166,7 @@ const Projects = ({ projects, sectionBackground }) => {
               <p className="text-sm text-white mb-4">
                 {selectedProject.description}
               </p>
-              <div className="flex space-x-4 mt-4">
+              <div className="flex mt-4">
                 <a
                   href={selectedProject.liveDemo}
                   target="_blank"

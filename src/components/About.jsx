@@ -70,7 +70,7 @@ const About = ({ about, sectionBackground }) => {
             y: 0,
             scale: 1,
             duration: 1.5,
-            ease: "elastic.out(1.1, 0.5)",
+            ease: "elastic.out(.5, 0.5)",
           },
         );
       }

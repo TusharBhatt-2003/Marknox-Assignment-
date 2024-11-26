@@ -7,7 +7,7 @@ const Footer = ({ name, footerBG }) => {
   return (
     <footer className="bg-black">
       <div
-        className=" text-white pt-16 pb-28 rounded-t-3xl "
+        className=" text-white pt-16 pb-28 rounded-t-3xl"
         style={{
           backgroundImage: `url(${footerBG})`, // Background image for the whole section
           backgroundSize: "cover",

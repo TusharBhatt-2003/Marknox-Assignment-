@@ -73,7 +73,7 @@ const Contact = ({ contactSection }) => {
       gsap.fromTo(
         sectionRef.current,
         { opacity: 0, y: 0, scale: 0 }, // Initial state
-        { opacity: 1, y: 0, scale: 1, duration: 2, ease: "elastic(.5, 0)" }, // Target state
+        { opacity: 1, y: 0, scale: 1, duration: 3, ease: "elastic(1, 0)" }, // Target state
       );
       gsap.fromTo(
         headingRef.current,
@@ -85,41 +85,56 @@ const Contact = ({ contactSection }) => {
         { opacity: 1, y: 500, scale: 0 }, // Initial state
         { opacity: 1, y: 0, scale: 1, duration: 2, ease: "elastic(.5, 0)" }, // Target state
       );
+      // Stagger animation for form fields
+      gsap.fromTo(
+        ".form-field", // Target all form fields with this class
+        { opacity: 0, x: 100, scale: 0 }, // Start state
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 1,
+          ease: "bounce(1)",
+          stagger: 0.3, // Stagger by 0.2 seconds
+          delay: 0.1, // Start after a slight delay
+        },
+      );
     }
   }, [isVisible]);
 
   return (
     <div className="py-20 h-screen flex justify-center items-center bg-white font-['font'] overflow-hidden border-8 rounded-3xl border-black">
-      <div
-        className="h-[80vh] flex flex-col justify-evenly mx-auto px-4 text-center"
-        ref={sectionRef}
-      >
+      <div className="h-[80vh] flex flex-col justify-evenly mx-auto px-4 text-center">
         <h2
           className="text-4xl font-bold mb-6 font-['semibold']"
           ref={headingRef}
         >
           {contactSection.title}
         </h2>
-        <p className="mb-6">{contactSection.message}</p>
+        <p className="mb-6" ref={sectionRef}>
+          {contactSection.message}
+        </p>
         <form className="space-y-4" onSubmit={handleSubmit}>
           {contactSection.formFields.map((field, index) => (
             <div key={index}>
-              <label className="block font-['semibold'] text-left mb-2 font-semibold">
-                {field.label}
+              <label className="block font-['semibold'] form-field text-left mb-2 font-semibold">
+                {field.label} :
               </label>
               {field.type === "textarea" ? (
                 <textarea
+                  placeholder={field.placeholder}
                   name={field.name}
-                  className="w-full border-b border-black outline-none p-2"
+                  className="w-full form-field border-b border-black outline-none p-2 placeholder:text-zinc-300"
                   required={field.required}
                   value={formData[field.name] || ""}
                   onChange={handleChange}
                 />
               ) : (
                 <input
+                  placeholder={field.placeholder}
                   type={field.type}
                   name={field.name}
-                  className="w-full border-b border-black outline-none p-2"
+                  className="w-full border-b form-field border-black outline-none p-2 placeholder:text-zinc-300"
                   required={field.required}
                   value={formData[field.name] || ""}
                   onChange={handleChange}
