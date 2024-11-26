@@ -8,13 +8,13 @@ const Footer = ({ name, footerBG }) => {
     <footer className="bg-black">
       <div
         className=" text-white pt-16 pb-28 rounded-t-3xl"
-        style={{
-          backgroundImage: `url(${footerBG})`, // Background image for the whole section
-          backgroundSize: "cover",
-          backgroundPosition: "",
-          backgroundRepeat: "no-repeat",
-          filter: "contrast(5)", // Increase contrast to 150%
-        }}
+        // style={{
+        //   backgroundImage: `url(${footerBG})`, // Background image for the whole section
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "",
+        //   backgroundRepeat: "no-repeat",
+        //   filter: "contrast(5)", // Increase contrast to 150%
+        // }}
       >
         <div className="flex h-full flex-col gap-5 items-center">
           {/* Social Media Links */}
