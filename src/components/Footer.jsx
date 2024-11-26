@@ -7,7 +7,7 @@ const Footer = ({ name, footerBG }) => {
   return (
     <footer className="bg-black">
       <div
-        className=" h-[50vh] text-white pt-16 pb-28 rounded-t-3xl "
+        className=" text-white pt-16 pb-28 rounded-t-3xl "
         style={{
           backgroundImage: `url(${footerBG})`, // Background image for the whole section
           backgroundSize: "cover",
@@ -15,9 +15,9 @@ const Footer = ({ name, footerBG }) => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex h-full flex-col justify-evenly items-center">
+        <div className="flex h-full flex-col gap-5 items-center">
           {/* Social Media Links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 justify-center mb-5">
+          <div className="flex gap-10 justify-center mb-5">
             {Object.entries(socialMedia).map(([key, { link, icon }]) => {
               // Only render if both link and icon are present
               if (!link || !icon) return null;
